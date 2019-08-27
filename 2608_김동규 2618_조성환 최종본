@@ -4,21 +4,33 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
- 
+
+import re
+
+X = str(input('첫번째 일차식을 입력해주세요! (ax+by+c 꼴로 표현해 주세요) : '))
+numbers1 = re.findall("\d+", X)
+
+print(numbers1)
+
+Y = str(input('두번째 일차식을 입력해주세요! (ax+by+c 꼴로 표현해 주세요) : '))
+numbers2 = re.findall("\d+", Y)
+        
+Z = str(input('세번째 일차식을 입력해주세요! (ax+by+c 꼴로 표현해 주세요) : '))
+numbers3 = re.findall("\d+", Z)
+
 
 #조건 입력 받기
 
-a_1, b_1, c_1 = map(float, input('첫번째 일차부등식의 x의 계수, y의 계수, 상수항을 입력해주세요! (우변은 0으로, 부등호는 좌변이 더 큰 상태를 맞춰주세요!) : ').split())
+a_1, b_1, c_1 = map(float, numbers1)
 
-a_2, b_2, c_2 = map(float, input('두번째 일차부등식의 x의 계수, y의 계수, 상수항을 입력해주세요! (우변은 0으로, 부등호는 좌변이 더 큰 상태를 맞춰주세요!) : ').split())
+a_2, b_2, c_2 = map(float, numbers2)
 
-a_3, b_3, c_3 = map(float, input('세번째 일차부등식의 x의 계수, y의 계수, 상수항을 입력해주세요! (우변은 0으로, 부등호는 좌변이 더 큰 상태를 맞춰주세요!) : ').split())
+a_3, b_3, c_3 = map(float, numbers3)
 
  
 
 #일차연립방정식의 해 구하기
 
- 
 
 #1,2번 방정식의 해
 
